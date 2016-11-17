@@ -56,6 +56,9 @@ h3{
 	color: white;
 	font-size: 20px;
 }
+::selection {
+  background: lightblue;
+}
 p.tagline{
 	position: relative;
 	margin: 2% 0 6% 2%;
@@ -75,7 +78,8 @@ p.tagline::before{
 	margin: 0 auto;
 }
 p.desc{
-	margin-right: 70%;
+	padding-right: 70%;
+	line-height: 1.6;
 }
 footer {
 	position: absolute;
@@ -127,9 +131,15 @@ label p:hover, label p:focus{
 	cursor: pointer;
 	background-color: white;
 	color: black;
+	font-weight: bold;
+}
+input[type="radio"]:checked + label p{
+	background-color: white;
+	color: black;
+	font-weight: bold;
 }
 .choice{
-	margin: 20% 0 1% 0;
+	margin: 10% 0 1% 0;
 	font-size: 25px;
 	letter-spacing: 2px;
 	color: white;
@@ -154,7 +164,7 @@ input[type=submit]:hover, input[type=submit]:focus {
 	border: 2px solid white;
 	background-color: transparent;
 	color: white;
-	margin-top: 5%;
+	margin-top: 3%;
 	font-weight: bold;
 }
 .reset:hover, .reset:focus {

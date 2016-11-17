@@ -45,10 +45,9 @@ movieApp.displayMovie = function(movieResult){
 	var moviePath = `url('http://image.tmdb.org/t/p/w1000/${movieResult.poster_path}')`
 	$('body').css('background', moviePath);
 	$('body').css('background-repeat', 'no-repeat');
-	$('body').css('background-size', 'cover');
-	$('body').css('background-position', 'center bottom');
+	$('body').css('background-size', 'contain');
+	$('body').css('background-position', 'center top');
 	$('body').css('background-color', 'black');
-	$('')
 
 	//function that on click, reset button reloads page
 	$('.reset').on('click',function() {
@@ -67,11 +66,11 @@ movieApp.formListener = function(){
 	});
 };//end of formListener function
 
-$('.question label p').click(function() {
-	$(".question p.clicked").removeClass("clicked");
-	// $(this).addClass('clicked');
-	$('.question label p')
-});
+// $('.question label p').click(function() {
+// 	$(".question p.clicked").removeClass("clicked");
+// 	// $(this).addClass('clicked');
+// 	$('.question label p')
+// });
 
 //when page loads get data
 movieApp.init = function(){
